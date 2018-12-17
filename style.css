@@ -1,0 +1,545 @@
+/*Navigation with flexbox mobile first*/
+
+
+* {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1,
+h2,
+p,
+h3 {
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    background: white;
+    width: 100%;
+    padding: 0 20px;
+
+}
+
+#logo-burger {
+    display: flex;
+    align-items: center;
+    margin-left: 0.5em;    
+}
+
+#logo img {
+    width: 90%;
+    margin-top: 10%;
+
+}
+
+#logo {
+    width: 200px;
+
+}
+
+#logo,
+#main-nav a {
+    color: black;
+    text-decoration: none;
+}
+
+#main-nav {
+    display: flex;
+    margin-right: .5em;
+    list-style: none;
+}
+
+#main-nav a {
+    display: block;
+    margin-left: 1em;
+    font-size: 1.4em;
+    line-height: 1.4em;
+}
+
+}
+
+#main-nav a:hover {
+    color: white;
+}
+
+.active {
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+.forside1 {
+    width: 100%;
+    margin: 0;
+}
+
+.kant {
+    width: 100%;
+    margin-top: -10px;
+}
+
+h1,
+h2 {
+    border-bottom: 2px solid #FF7F00;
+    margin: 5px 15px 10px 15px;
+    text-align: center;
+
+}
+
+h3 {
+    border-bottom: 2px solid #FF7F00;
+    margin: 5px 15px 10px 15px;
+
+}
+
+p {
+    line-height: 1.5em;
+    border-bottom: 2px solid #FF7F00;
+    padding-bottom: 10px;
+    margin: 0 15px 0 15px;
+    font-size: 20px;
+}
+
+body {
+    background-color: #BBDEE8;
+}
+
+.genbrug {
+    width: 92%;
+    margin: 20px 15px 10px 15px;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.lasmere,
+p {
+    border-bottom: none;
+}
+
+.tekstbillede {
+    position: relative;
+    text-align: center;
+    color: black;
+    font-size: 90%;
+    text-shadow: 0px 2px #D3D2D0;
+}
+
+.tekstbillede img {
+    width: 100%;
+}
+
+
+.forsidetekst {
+    position: absolute;
+    top: 50%;
+    left: 53%;
+    transform: translate(-50%, -50%);
+    font-size: 2em;
+}
+
+.ipadstr {
+    display: flex;
+    flex-direction: column;
+}
+
+.produktbillede {
+    position: absolute;
+    top: 60%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5em;
+
+}
+
+.ipadpc {
+    display: none;
+}
+
+#undertekst {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    font-size:1em; 
+    transform: translate(-50%, -50%);
+    
+}
+
+.produktbillede2 {
+    position: absolute;
+    top: 55%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    font-size: 1.3em;
+
+}
+
+
+/*Footer*/
+footer {
+    text-align: center;
+    background-color: white;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 15%;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-instagram {
+    background: #6A453B;
+    color: white;
+
+}
+
+.fa-youtube {
+    background: #bb0000;
+    color: white;
+}
+
+h2 {
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+/*produkter*/
+
+.bladbillede {
+    width: 100%;
+
+}
+
+.produkter img {
+
+    border: 2px solid #FF7F00;
+    border-radius: 50%;
+    width: 50%;
+    margin: 5% 0% 5% 25%;
+    transition: transform .4s;
+}
+
+.produkter img:hover {
+    transform: scale(1.10);
+}
+
+.produkter h1 {
+    text-align: center;
+}
+
+/*OM OS*/
+
+.bladbilledet {
+    width: 100%;
+}
+  
+
+/*MEDIA QUERY MOBILE */
+
+@media all and (max-width: 599px) {
+
+    /*HEADER NAV*/
+    header {
+        display: block;
+    }
+
+    #logo-burger {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #logo-burger label {
+        display: block;
+        font-size: 2em;
+        cursor: pointer;
+    }
+
+    #toggle:checked + #main-nav {
+        display: block;
+    }
+
+    #main-nav {
+        display: none;
+    }
+
+    #main-nav li {
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    #main-nav a {
+        margin: 0;
+        text-align: right;
+    }
+
+    #main-nav li:last-of-type {
+        border-bottom: none;
+    }
+
+}
+
+/*MEDIA QUERY TABLET AND ABOVE*/
+
+@media all and (min-width: 600px) {
+
+    /*HEADER NAV*/
+    header {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        /*remove this if you do not want the column layout whit logo above menu for medium size screens*/
+    }
+
+    #logo-burger {
+        margin: 0;
+
+    }
+
+    #logo {
+        margin-top: .3em;
+    }
+
+    #main-nav {
+        justify-content: flex-end;
+        width: 100%;
+        margin: 0;
+    }
+
+    #main-nav a {
+        margin: 0 .5em;
+
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    label {
+        display: none;
+    }
+
+    p {
+        font-size: 1.5em;
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    h3 {
+        font-size: 2em;
+    }
+
+    .forsidetekst {
+        position: absolute;
+        top: 50%;
+        left: 55%;
+        transform: translate(-50%, -50%);
+        font-size: 4.5em;
+    }
+
+    .centered {
+        position: absolute;
+        top: 38%;
+        left: 35%;
+        transform: translate(-50%, -50%);
+        font-size: 1.5em;
+    }
+
+    .tekstbillede,
+    img {
+        width: 100%;
+    
+    }
+
+    .fa {
+        padding: 30px;
+        font-size: 100px;
+        width: 10%;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 80%;
+        margin-right: 3.5%;
+        margin-left: 3.5%;
+    }
+
+    .fa:hover {
+        opacity: 0.7;
+    }
+
+    .ipadstr {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .section-section {
+        width: 48%
+    }
+
+
+
+    .wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .produkter {
+        width: 49%;
+        font-size: 0.5em;
+        background-color: white;
+        margin: 5px auto;
+    }
+
+    .produktbillede {
+        font-size: 3em;
+    }
+
+    .produktcenter {
+        width: 50%;
+        font-size: 0.5em;
+        margin-left: 25%;
+    }
+
+    .ipadpc {
+        display: block;
+    }
+    
+    
+    /*Om os*/
+    #undertekst {
+    font-size:1.5em;
+    top: 70%;
+    left: 50%;
+   
+    
+    
+}
+
+.produktbillede2 {
+    font-size: 2.5em;
+
+}
+    
+    .historie{
+        width: 80%;
+        margin:0 auto;
+        background-color: white;
+    }
+    .historie2{
+        margin: 0 auto;
+        width: 90%;
+    }
+        
+    
+}
+
+/*MEDIA QUERY LAPTOP AND ABOVE*/
+
+@media all and (min-width: 1000px) {
+
+    /*HEADER*/
+    header {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    /*main*/
+    p {
+        font-size: 1.5em;
+    }
+
+    .centered {
+        font-size: 2.5em;
+    }
+
+    .fa {
+        padding: 20px;
+        font-size: 50px;
+        width: 4%;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 80%;
+        margin-right: 2.5%;
+        margin-left: 2.5%;
+    }
+
+    .produkter {
+        width: 30%;
+        background-color: white;
+        margin: 10px auto;
+    }
+
+    .wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    .produktbillede {
+        position: absolute;
+        top: 70%;
+        left: 33%;
+        transform: translate(-50%, -50%);
+        font-size: 4em;
+    }
+
+    .tekstbillede {}
+
+    .forsidetekst {
+        font-size: 3.5em;
+
+    }
+
+    h3 {
+        font-size: 2em;
+    }
+
+    h1 {
+        font-size: 4em;
+    }
+    /*om os*/
+        #undertekst {
+    font-size:2em; 
+    top: 68%;
+    left: 50%;
+    
+    
+}
+
+.produktbillede2 {
+    font-size: 3.8em;
+
+}
